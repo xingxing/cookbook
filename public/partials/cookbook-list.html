@@ -1,0 +1,21 @@
+<div ng-controller="cookbookListCrl">
+  <form ng-submit="cookbookList.searchCookbooks()">
+    <input type="text" ng-model="todoList.keyword"  size="30" placeholder="Search"/>
+    <input type="submit"/>
+    <ul>
+      <li ng-repeat="material in cookbookList.materials">
+        <input type="checkbox" ng-model="todoList.material" > {{material.name}}
+      </li>
+    </ul>
+  </form>
+  
+  <ul>
+    <li ng-repeat="cookbook in cookbooks">
+      {{cookbook.name}}
+      <span><img width="30px" hight="30px" ng-src={{cookbook.image_url}}></span>
+      <span>{{cookbook.tags}}</span>
+      <span>{{cookbook.description}}</span>
+      <span><a href="#/cookbooks/{{cookbook.id}}">EDIT</a></span>
+    </li>
+  </ul>
+</div>
