@@ -1,0 +1,26 @@
+<form class="form-horizontal" name="cookbookForm">
+
+  <div class="form-group">
+    <div class="control-group" ng-class="{error: cookbookForm.name.$invalid && !myForm.name.$pristine}">
+      <label>Cookbook's Name</label>
+      <div>
+        <input type="text" name="name" ng-model="editCookbook.cookbook.name" class="form-control" required>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    
+  </div>
+
+  <br/>
+
+  <a class="btn btn-warning" href="#" role="button">Cancel</a>
+  <button ng-click="editProject.save()" ng-disabled="myForm.$invalid"
+          class="btn btn-primary">Save</button>
+  <button ng-click="editProject.destroy()"
+                    ng-show="editProject.project.$id" class="btn btn-danger">Delete</button>
+
+  
+</form>

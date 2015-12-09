@@ -17,3 +17,23 @@ cookbookController.controller("cookbookDetailCrl",
                                    });
                                }]
                              );
+
+
+cookbookController.controller("cookbookNewCrl",
+                              ["$scope", '$http',
+                               function($scope, $http){
+                                   $http.get("/materials").success(function(data){ $scope.materials = data });
+                               }]
+                             );
+
+
+
+
+
+// cookbookController.controller("cookbookEditCrl"
+//                               ["$scope", '$ttp', '$routeParams',
+//                                function($scope, $http, $routeParams){
+                                   
+//                                }
+//                               ]
+//                              );

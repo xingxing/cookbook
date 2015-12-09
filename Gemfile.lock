@@ -16,11 +16,15 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     bson (4.0.0)
     builder (3.2.2)
+    byebug (8.2.1)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
+    diff-lcs (1.2.5)
     equalizer (0.0.11)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
     grape (0.14.0)
       activesupport
       builder
@@ -43,14 +47,35 @@ GEM
       mongo (~> 2.1)
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
+    mongoid-rspec (3.0.0)
+      mongoid (~> 5.0)
+      rake
+      rspec (~> 3.3)
     multi_json (1.11.2)
     multi_xml (0.5.5)
     origin (2.1.1)
+    puma (2.15.3)
     rack (1.6.4)
     rack-accept (0.4.5)
       rack (>= 0.4)
     rack-mount (0.8.3)
       rack (>= 1.0.0)
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    rake (10.4.2)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.1)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -64,8 +89,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
+  factory_girl
   grape
   mongoid (~> 5.0.0)
+  mongoid-rspec (= 3.0.0)
+  puma
+  rack-test
+  rspec
 
 BUNDLED WITH
    1.10.6
