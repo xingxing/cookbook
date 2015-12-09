@@ -10,5 +10,6 @@ FactoryGirl.define do
 
     image "ssd.jpg"
 
+    description "首先..."
   end
 end

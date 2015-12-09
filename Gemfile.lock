@@ -84,6 +84,10 @@ GEM
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
       equalizer (~> 0.0, >= 0.0.9)
+    will_paginate (3.0.7)
+    will_paginate_mongoid (2.0.1)
+      mongoid
+      will_paginate (~> 3.0)
 
 PLATFORMS
   ruby
@@ -97,6 +101,7 @@ DEPENDENCIES
   puma
   rack-test
   rspec
+  will_paginate_mongoid
 
 BUNDLED WITH
    1.10.6

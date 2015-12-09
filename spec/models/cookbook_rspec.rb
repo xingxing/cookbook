@@ -13,6 +13,9 @@ RSpec.describe Cookbook ,type: :model do
 
   it { is_expected.to validate_presence_of(:name) }
 
+  it { is_expected.to have_field(:description).of_type(String) }
+
+  it { is_expected.to validate_presence_of(:description) }
 
   it "correct data" do
     cb = build( :cookbook )

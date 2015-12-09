@@ -3,7 +3,6 @@ class Cookbook
 
   include Mongoid::Document
   include Mongoid::Timestamps::Short
-  include Mongoid::Attributes::Dynamic
 
   store_in collection: :cb
 
@@ -19,7 +18,9 @@ class Cookbook
   # 一张图片
   field :image, type: String
 
-  validates_presence_of :name
+  field :description, type: String
+
+  validates_presence_of :name, :description
 
   validate :materials_presence
   validate :material_names_uniq
