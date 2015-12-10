@@ -5,4 +5,4 @@ cookbookFilter.filter('cb_tags',
                           return function(tags) {
                               return tags.join("-");
                           };
-});
+                      });

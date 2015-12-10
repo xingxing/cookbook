@@ -1,4 +1,4 @@
-var cookbookApp = angular.module('cookbookApp', ["ngRoute", "cookbookController"]);
+var cookbookApp = angular.module('cookbookApp', ["ngRoute", "cookbookController", "cookbookFilter"]);
 
 cookbookApp.config(["$routeProvider", function($routeProvider){
     $routeProvider.

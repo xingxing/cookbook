@@ -4,7 +4,8 @@ cookbookController.controller("cookbookListCrl",
                               ['$scope', '$http',
                                function($scope, $http){
                                    $http.get("/cookbooks.json").success(function(data){
-                                       $scope.cookbooks = data ;
+                                       $scope.cookbooks = data.data ;
+                                       $scope.paginate  = data.paginate;
                                    });
 
                                } ]);

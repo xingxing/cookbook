@@ -8,15 +8,41 @@
       </li>
     </ul>
   </form>
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Materials</th>
+        <th>Tags</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="cb in cookbooks">
+        <td>{{cb._id.$oid}}</td>
+        <td>{{cb.image}}</td>
+        <td>{{cb.name}}</td>
+        <td>{{cb.materials}}</td>
+        <td>{{cb.tags| cb_tags }}</td>
+        <td>{{cb.description}}</td>
+      </tr>
+    </tbody>
+  </table>
+
   
-  <ul>
-    <li ng-repeat="cookbook in cookbooks">
-      {{cookbook.name}}
-      <span><img width="30px" hight="30px" ng-src={{cookbook.image_url}}></span>
-      <span>{{cookbook.tags}}</span>
-      <span>{{cookbook.description}}</span>
-      <span><a href="#/cookbooks/{{cookbook.id}}">Show</a></span>
-      <span><a href="#/cookbooks/{{cookbook.id}}/edit">Edit</a></span>
-    </li>
-  </ul>
+  <!-- <ul> -->
+    
+  <!--   <li ng-repeat="cookbook in cookbooks"> -->
+  <!--     {{ cookbook.name }} -->
+  <!--     <\!-- <span><img width="30px" hight="30px" ng-src={{cookbook.image_url}}></span> -\-> -->
+  <!--     <\!-- <span>{{cookbook.tags}}</span> -\-> -->
+  <!--     <\!-- <span>{{cookbook.description}}</span> -\-> -->
+  <!--     <\!-- <span><a href="#/cookbooks/{{cookbook}}">Show</a></span> -\-> -->
+  <!--     <\!-- <span><a href="#/cookbooks/{{cookbook}}/edit">Edit</a></span> -\-> -->
+  <!--   </li> -->
+  <!-- </ul> -->
 </div>
